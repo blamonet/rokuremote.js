@@ -16,6 +16,45 @@
                 $.support.cors = true;
                 $.post(api_url);
             }
+            
+            $(document).keydown(function(e) {
+                switch(e.which) {
+                    case 37:
+                    roku_command('Left');
+                    break;
+
+                    case 38:
+                    roku_command('Up');
+                    break;
+
+                    case 39:
+                    roku_command('Right');
+                    break;
+
+                    case 40:
+                    roku_command('Down');
+                    break;
+                    
+                    case 13:
+                    roku_command('Select');
+                    break;
+                    
+                    case 66:
+                    roku_command('Back');
+                    break;
+                    
+                    case 32:
+                    roku_command('Play');
+                    break;
+                    
+                    case 72:
+                    roku_command('Home');
+                    break;
+
+                    default: return; 
+                }
+                e.preventDefault(); 
+            });
     	</script>
     	
     	<style type="text/css">
