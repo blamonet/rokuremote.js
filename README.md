@@ -1,5 +1,5 @@
 # rokuremote.js
-Rook Remote in JavaScript
+Roku Remote in JavaScript
 
 This is in pretty rough shape, I threw this together quickly and might refine later. 
 
