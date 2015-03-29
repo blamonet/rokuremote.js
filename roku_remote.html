@@ -11,6 +11,18 @@
     	    roku_port = '8060';
     	    roku_context = '/keypress/';
     	    
+    	    function roku_keyboard() {
+    	        // http://:8060/keypress/Lit_r // sending an r
+    	    }
+    	    
+    	    function roku_apps() {
+    	        alert('apps');
+    	        // http://:8060/query/apps get
+    	        // http://:8060/query/icon/12 get
+    	        // http://:8060/launch/12 post
+    	        
+    	    }
+    	    
             function roku_command(cmd) {
                 var api_url = 'http://' + roku_ip_address + ":" + roku_port + roku_context + cmd;
                 $.support.cors = true;
@@ -59,7 +71,7 @@
     	
     	<style type="text/css">
     	    .remote {
-    	        width: 170px;
+    	        width: 200px;
     	        margin: 20px auto;
     	        border: 1px solid #333;
     	        background-color: black;
@@ -67,6 +79,11 @@
     	        -webkit-border-radius: 5px;
                 -moz-border-radius: 5px;
                 border-radius: 5px;
+    	    }
+    	    
+    	    .purple_btn {
+    	        background-color: #bbaaee;
+    	        border: 1px solid #bbaaee;
     	    }
 
     	</style>
@@ -86,41 +103,55 @@
           <div class="col-xs-12 row" style="margin-top:10px">
             <div class="col-xs-4">&nbsp;</div>
             <div class="col-xs-4">
-                <button class="btn btn-default" onclick="javascript:roku_command('Up')"><i class="glyphicon glyphicon-chevron-up"></i></button>
+                <button class="btn btn-default purple_btn" onclick="javascript:roku_command('Up')"><i class="glyphicon glyphicon-chevron-up"></i></button>
             </div>
             <div class="col-xs-4">&nbsp;</div>
           </div>
           <div class="col-xs-12 row">
             <div class="col-xs-4">
-                <button class="btn btn-default" onclick="javascript:roku_command('Left')"><i class="glyphicon glyphicon-chevron-left"></i></button>
+                <button class="btn btn-default purple_btn" onclick="javascript:roku_command('Left')"><i class="glyphicon glyphicon-chevron-left"></i></button>
             </div>
             <div class="col-xs-4">&nbsp;</div>
             <div class="col-xs-4">
-                <button class="btn btn-default" onclick="javascript:roku_command('Right')"><i class="glyphicon glyphicon-chevron-right"></i></button>
+                <button class="btn btn-default purple_btn" onclick="javascript:roku_command('Right')"><i class="glyphicon glyphicon-chevron-right"></i></button>
             </div>
           </div>
           <div class="col-xs-12 row">
             <div class="col-xs-4">&nbsp;</div>
             <div class="col-xs-4">
-                <button class="btn btn-default" onclick="javascript:roku_command('Down')"><i class="glyphicon glyphicon-chevron-down"></i></button>
+                <button class="btn btn-default purple_btn" onclick="javascript:roku_command('Down')"><i class="glyphicon glyphicon-chevron-down"></i></button>
             </div>
             <div class="col-xs-4">&nbsp;</div>
           </div>
           <div class="col-xs-12 row" style="margin-top:10px">
-            <div class="col-xs-4">&nbsp;</div>
+            <div class="col-xs-4">
+                <button class="btn btn-default" onclick="javascript:roku_command('InstantReplay')"><i class="glyphicon glyphicon-repeat"></i></button>
+            </div>
             <div class="col-xs-4">
                 <button class="btn btn-default" onclick="javascript:roku_command('Select')"><span style="font-size:10px">OK</span></button>
             </div>
-            <div class="col-xs-4">&nbsp;</div>
+            <div class="col-xs-4">
+                <button class="btn btn-default" onclick="javascript:roku_command('Info')"><i class="glyphicon glyphicon-asterisk"></i></button>
+            </div>
           </div>
           <div class="col-xs-12 row" style="margin-top:10px">
-            <div class="col-xs-4">&nbsp;</div>
+            <div class="col-xs-4">
+                <button class="btn btn-default" onclick="javascript:roku_command('Rev')"><i class="glyphicon glyphicon-backward"></i></button>
+            </div>
             <div class="col-xs-4">
                 <button class="btn btn-default" onclick="javascript:roku_command('Play')"><i class="glyphicon glyphicon-play"></i></button>
             </div>
-            <div class="col-xs-4">&nbsp;</div>
+            <div class="col-xs-4">
+                <button class="btn btn-default" onclick="javascript:roku_command('Fwd')"><i class="glyphicon glyphicon-forward"></i></button>
+            </div>
           </div>
-        </div>
+          <!--<div class="col-xs-12 row" style="margin-top:50px">
+            &nbsp;
+          </div>
+          <div class="row text-center">
+                <button class="btn btn-default purple_btn" onclick="javascript:roku_apps()"><span style="font-size:10px">APPS</span></button>
+          </div>
+        </div>-->
     </body>
     </html>
 
