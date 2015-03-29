@@ -1,7 +1,7 @@
 # rokuremote.js
 Roku Remote in JavaScript
 
-This is in pretty rough shape, I threw this together quickly and might refine later. 
+![Screenshot 1](https://raw.githubusercontent.com/blamonet/rokuremote.js/master/screenshots/remote.png)
 
 # Usage
 
